@@ -1,0 +1,39 @@
+/* frontend/style.css */
+body { font-family: Arial, sans-serif; margin: 0; background: #f3f3f3; }
+
+/* chat bubble */
+#chatBubble {
+  position: fixed; bottom: 20px; right: 20px;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #3744d9; color: white; display:flex; align-items:center; justify-content:center;
+  cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+/* chat window */
+#chatWindow { position: fixed; bottom: 90px; right: 20px; width: 360px; max-height: 520px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.2); background: white; display:flex; flex-direction:column; z-index: 9999; }
+#chatWindow.hidden { display:none; }
+.chat-header { display:flex; align-items:center; padding:10px; background:#3744d9; color:white; }
+.logo { width:36px; height:36px; border-radius:6px; margin-right:8px; }
+.title { flex:1; font-weight:600; }
+#closeBtn { background:transparent; border:none; color:white; font-size:16px; cursor:pointer; }
+
+/* messages */
+#messages { padding:12px; flex:1; overflow-y:auto; background:#fff; display:flex; flex-direction:column; gap:8px; }
+.msg { padding:10px 12px; border-radius:10px; max-width:80%; }
+.msg.user { background:#e8d9ff; align-self:flex-end; }
+.msg.bot { background:#f1f1f1; align-self:flex-start; }
+
+/* input area */
+.input-area { display:flex; border-top:1px solid #eee; padding:10px; background:#fafafa; }
+#userInput { flex:1; padding:10px; border-radius:8px; border:1px solid #ddd; outline:none; }
+#sendBtn { margin-left:8px; padding:10px 14px; background:#3744d9; color:white; border:none; border-radius:8px; cursor:pointer; }
+
+/* modal/form */
+.modal { position: fixed; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; background: rgba(0,0,0,0.4); z-index: 10000; }
+.modal.hidden { display:none; }
+.modal-content { background:white; padding:20px; border-radius:8px; width:320px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.modal-content input { width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ddd; }
+.modal-content button { padding:10px 14px; margin-top:8px; border:none; border-radius:6px; cursor:pointer; }
+.modal-content button[type="submit"] { background:#3744d9; color:white; }
+.modal-content button#closeForm { background:#ddd; margin-left:8px; color:#333; }

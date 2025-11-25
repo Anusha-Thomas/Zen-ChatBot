@@ -1,0 +1,17 @@
+langchain_community
+langchain
+requests
+fastapi
+uvicorn
+pydantic
+langchain_core
+langchain_openai
+pandas
+numpy
+langchain-google-genai
+langchain_classic
+beautifulsoup4
+sentence-transformers
+faiss-cpu
+python-dotenv
+sqlmodel
