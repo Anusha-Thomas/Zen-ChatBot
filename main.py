@@ -6,12 +6,15 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from sqlmodel import Session, select
 from fastapi.staticfiles import StaticFiles
+import os
 
 
 from database import init_db, engine, get_session
 from models import Contact, User
 
 from webchat import qa, is_fee_question, is_course_question
+
+print("PORT:", os.getenv("PORT")) 
 
 app = FastAPI(title="Zen Chatbot Backend (Local)")
 
