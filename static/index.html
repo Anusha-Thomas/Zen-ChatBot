@@ -1,0 +1,49 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zen Institute Chat</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Floating bubble -->
+  <div id="chatBubble" title="Open chat">💬</div>
+
+  <!-- Chat window -->
+  <div id="chatWindow" class="hidden">
+    <div class="chat-header">
+      <img src="https://www.zeninstitute.in/web/image/website/1/social_default_image" alt="logo" class="logo" />
+      <div class="title">Zen Institute Assistant</div>
+      <button id="closeBtn">✖</button>
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="input-area">
+      <input id="userInput" placeholder="Type your question..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Contact form popup -->
+  <div id="formPopup" class="modal hidden">
+    <div class="modal-content">
+      <h3>Fill this form to get fee/course details</h3>
+      <form id="contactForm">
+        <input id="name" placeholder="Full Name" required />
+        <input id="phone" placeholder="Phone" required />
+        <input id="email" placeholder="Email" type="email" required />
+        <input id="course" placeholder="Course interested" required />
+        <button type="submit">Submit</button>
+        <button type="button" id="closeForm">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

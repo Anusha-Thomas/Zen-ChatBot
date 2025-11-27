@@ -6,7 +6,7 @@ from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from sqlmodel import Session, select
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
+
 
 from database import init_db, engine, get_session
 from models import Contact, User
@@ -22,7 +22,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-templates = Jinja2Templates(directory="templates")
 
 # Serve frontend if you put it in backend/static (optional)
 app.mount("/static", StaticFiles(directory="static", html=True), name="static")
