@@ -1,4 +1,5 @@
 import uuid
+import uvicorn
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -107,3 +108,8 @@ def list_inquiries():
                 "created_at": c.created_at
             })
     return {"inquiries": data}
+
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Render assigns this dynamically
+    uvicorn.run(app, host="0.0.0.0", port=port)
